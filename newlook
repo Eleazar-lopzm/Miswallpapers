@@ -1,0 +1,9 @@
+#!/bin/sh
+
+wall=$(find ~/Photos/wallpapers/ -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
+#add this as a background wallpaper
+xwallpaper --zoom $wall
+#generate color scheme
+wal -c
+wal -i $wall
+xdotool key super+F5
